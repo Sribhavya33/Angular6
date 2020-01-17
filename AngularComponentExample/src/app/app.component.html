@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -18,3 +18,27 @@
   </li>
 </ul>
 
+<div *ngIf="courses.length > 0; else noCourses" >
+  List of Courses
+</div> -->
+
+<!-- <div *ngIf="courses.length == 0" >
+  No Courses
+</div> -->
+
+<!-- <ng-template #noCourses>
+  No Courses
+</ng-template> -->
+<div class="container">
+  <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav item">
+          <li>
+              <a [routerLink]="['/list']" routerLinkActive="active">List</a>
+          </li>
+          <li>
+              <a [routerLink]="['/create']" routerLinkActive="active">Create</a>
+          </li>
+      </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
